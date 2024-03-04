@@ -1,0 +1,8 @@
+int main()
+{
+  User u;//用户类
+  Function F;
+  vector<Function> FunctionUser;
+  custom(u);
+  Choose(u,F);
+}

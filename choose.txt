@@ -1,0 +1,20 @@
+char Choose(  User &u,Function &F)
+{
+  char c=menu();
+  while(c!='6')
+  {
+      switch(c)
+  {
+  case '1': F.Saving(u);c=menu();break;
+  case '2':F.Drawing(u);c=menu();break;
+  case '3':F.Balance(u);c=menu();break;
+  case '4':F.Record(u);c=menu();break;
+  case '5':u.print();c=menu();break;
+  }
+ 
+ 
+  }
+  u.SaveFile(u);
+  Sign();
+  return 0;
+}

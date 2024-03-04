@@ -1,0 +1,45 @@
+char menu()
+{
+  int k=0;
+  char a[3],c,i;
+    system("cls");
+    cout<<"\n\n\n\t\t                主菜单          \n\n" ;
+    cout<<"\t\t*********************************************\n"
+        <<"\t\t*                                           *\n"
+        <<"\t\t*                                           *\n"
+        <<"\t\t*     操作方式:                             *\n"
+        <<"\t\t*                                           *\n"
+        <<"\t\t*             1.存款       2.取款           *\n"
+        <<"\t\t*                                           *\n"
+        <<"\t\t*             3.查询余额   4.查询历史记录   *\n"
+        <<"\t\t*                                           *\n"
+        <<"\t\t*             5.用户信息   6.保存并退出     *\n"
+        <<"\t\t*********************************************\n"<<endl;
+        while(k<3)
+        {
+            cout<<"\n\t\t请选择操作方式:  ";
+        cin>>a;
+        if(strlen(a)==1)
+        {
+            for(i='1';i<='6';i++)
+            {  c=i;
+            if(c==a[0]) return c;
+            }
+        }
+        else
+        {
+            system("cls");
+        cerr<<"\n\n\n\t\t\t输入有误!\n"<<endl
+              <<"\t\t\t请重新输入： "<<endl;
+        k++;
+        }
+        while(k>=3)
+        {
+            system("cls");
+          cerr<<"\n\n\n\t\t对不起，你三次输入不正确\n"<<endl
+             <<"\n\t\t感谢你的使用，再见！\n"<<endl;
+            exit(0);
+        }
+        }
+        return c;
+    }
